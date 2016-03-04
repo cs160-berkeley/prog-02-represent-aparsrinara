@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Represent</string>
+    <string name="title_input">InputActivity</string>
+    <string name="location_prompt">Select a Location</string>
+    <string name="google_app_id">160</string>
+    <string-array name="location_array">
+        <item>Select a Location</item>
+        <item>Current Location</item>
+        <item>Zipcode</item>
+    </string-array>
+</resources>

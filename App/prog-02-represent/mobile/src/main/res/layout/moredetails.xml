@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/realinput">
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/textView"
+        android:text="    "
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="10000dp"
+        android:layout_marginTop="90dp"
+        android:id="@+id/scrollView2"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_alignTop="@+id/scrollView2"
+            android:layout_alignParentStart="true">
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="130dp"
+                android:id="@+id/picture"
+                android:background="@drawable/lonihancock"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="150dp"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:id="@+id/name"
+                android:text="Senator Loni Hancock"
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                android:layout_marginTop="150dp"
+                android:layout_marginLeft="115dp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:id="@+id/party"
+                android:text="Democratic Party"
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                android:layout_below="@+id/name"
+                android:layout_marginTop="-30dp"
+                android:layout_marginLeft="130dp"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:id="@+id/enddate"
+                android:text="End date of term: June 6, 2016"
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                android:layout_below="@+id/party"
+                android:layout_marginTop="-20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:id="@+id/committee"
+                android:text="Committees:"
+                android:textColor="#ffffff"
+                android:layout_alignStart="@+id/enddate"
+                android:layout_marginTop="230dp"/>
+      <TextView
+        android:layout_width="wrap_content"
+                android:layout_height="20dp"
+            android:id="@+id/comm1"
+            android:text="Public Chair"
+          android:textColor="#ffffff"
+          android:layout_below="@+id/committee"
+          android:layout_marginLeft="40dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:id="@+id/comm2"
+                android:textColor="#ffffff"
+                android:text="Budget Subcommittee No.5 on Corrections,
+          Public Safety and the Judiciary (Chair)"
+                android:layout_below="@+id/comm1"
+                android:layout_alignStart="@+id/comm1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:id="@+id/comm3"
+                android:textColor="#ffffff"
+                android:text="Budget and Fiscal Review"
+                android:layout_below="@+id/comm2"
+                android:layout_alignStart="@+id/comm1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:id="@+id/comm4"
+                android:text="Education"
+                android:textColor="#ffffff"
+                android:layout_below="@+id/comm3"
+                android:layout_alignStart="@+id/comm1"/>
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:id="@+id/comm5"
+                android:textColor="#ffffff"
+                android:text="Elections and Constitutional Amendments"
+                android:layout_alignEnd="@+id/comm2"
+                android:layout_below="@+id/comm4"
+                android:layout_alignStart="@+id/comm1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:id="@+id/comm6"
+                android:textColor="#ffffff"
+                android:text="Environmental Quality"
+                android:layout_below="@+id/comm5"
+                android:layout_alignStart="@+id/comm1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:id="@+id/bills"
+                android:text="Recently Sponsored Bills:"
+                android:textColor="#ffffff"
+                android:layout_below="@+id/comm6"
+                android:layout_alignStart="@+id/enddate"
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:id="@+id/bill1"
+                android:text="Feb. 19, 2016: A bill to restrict coal exports in CA"
+                android:textColor="#ffffff"
+                android:layout_below="@+id/bills"
+                android:layout_marginLeft="40dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:id="@+id/bill2"
+                android:textColor="#ffffff"
+                android:text="Sept. 9, 2015: Bill No.188 to amend and repeal
+    Section 12811.1 of the Public Utilities Code"
+                android:layout_below="@+id/bill1"
+                android:layout_alignStart="@+id/comm1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:id="@+id/bill3"
+                android:textColor="#ffffff"
+                android:text="Sept. 9, 2015: Bill No.196 to strengthen laws
+     against elder abuse"
+                android:layout_below="@+id/bill2"
+                android:layout_alignStart="@+id/comm1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:id="@+id/bill4"
+                android:textColor="#ffffff"
+                android:text="Feb. 11, 2015: Bill No.122 to require charter schools to notify superintendent if child leaves school for
+                an extended period of time"
+                android:layout_below="@+id/bill3"
+                android:layout_alignStart="@+id/comm1" />
+
+
+
+
+
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
