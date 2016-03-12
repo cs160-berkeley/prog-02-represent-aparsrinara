@@ -21,15 +21,21 @@ public class PhoneListenerService extends WearableListenerService {
 
     //   WearableListenerServices don't need an iBinder or an onStartCommand: they just need an onMessageReceieved.
     private static final String NAME = "/name";
+    private static final String TYPE = "/random";
 
     @Override
     public void onMessageReceived(MessageEvent messageEvent) {
         Log.d("T", "in PhoneListenerService, got: " + messageEvent.getPath());
-        if( messageEvent.getPath().equalsIgnoreCase("/1") ) {
+        if( messageEvent.getPath().equalsIgnoreCase(NAME) ) {
 
             // Value contains the String we sent over in WatchToPhoneService, "good job"
             //String value = new String(messageEvent.getData(), StandardCharsets.UTF_8);
-            String name = "Senator Loni Hancock";
+            String s = new String(messageEvent.getData(), StandardCharsets.UTF_8);
+            String[] arr = s.split("/");
+            String name = arr[0];
+            String party = arr[1];
+            String memberid = arr[2];
+            String endofdate = arr[3];
 
             // Make a toast with the String
             //Context context = getApplicationContext();
@@ -37,7 +43,9 @@ public class PhoneListenerService extends WearableListenerService {
 
             Intent intent = new Intent(this, Details.class);
             intent.putExtra("test.com.anarayan.test.name", name);
-            intent.putExtra("test.com.anarayan.test.party", "Democratic Party");
+            intent.putExtra("test.com.anarayan.test.party", party);
+            intent.putExtra("test.com.anarayan.test.memberId", memberid);
+            intent.putExtra("test.com.anarayan.test.endofdate", endofdate);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
             //Toast toast = Toast.makeText(context, value, duration);
@@ -49,21 +57,28 @@ public class PhoneListenerService extends WearableListenerService {
             // who said skeleton code is untouchable? #breakCSconceptions
 
         }
-        else if( messageEvent.getPath().equalsIgnoreCase("/2") ) {
+        else if( messageEvent.getPath().equalsIgnoreCase(TYPE) ) {
 
             // Value contains the String we sent over in WatchToPhoneService, "good job"
             //String value = new String(messageEvent.getData(), StandardCharsets.UTF_8);
-            String name = "Senator Mary Mcilroy";
+            //String name = "Senator Mary Mcilroy";
 
             // Make a toast with the String
             //Context context = getApplicationContext();
             //int duration = Toast.LENGTH_SHORT;
 
-            Intent intent = new Intent(this, Details.class);
-            intent.putExtra("test.com.anarayan.test.name", name);
-            intent.putExtra("test.com.anarayan.test.party", "Peace and Freedom Party");
+            Intent intent = new Intent(this, InputActivity.class);
+//            Intent intent2 = new Intent(this, PhoneToWatchService.class);
+            String s = new String(messageEvent.getData(), StandardCharsets.UTF_8);
+            String[] arr = s.split("/");
+            String lat = arr[0];
+            String lon = arr[1];
+            intent.putExtra("random", lat + "/" + lon);
+//            intent2.putExtra("random", lat + "/" + lon);
+            Log.d("T", "LAT AND LOG ARE: " + lat + "/" + lon);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
+//            startService(intent2);
             //Toast toast = Toast.makeText(context, value, duration);
             //toast.show();
 

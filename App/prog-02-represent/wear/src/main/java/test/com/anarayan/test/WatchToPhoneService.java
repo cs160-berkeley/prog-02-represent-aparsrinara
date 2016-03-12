@@ -60,32 +60,46 @@ public class WatchToPhoneService extends Service implements GoogleApiClient.Conn
         // Which cat do we want to feed? Grab this info from INTENT
         // which was passed over when we called startService
         Bundle extras = intent.getExtras();
+        StringBuilder s = new StringBuilder();
+
+        final String name = extras.getString("test.com.anarayan.test.name");
+        final String party = extras.getString("test.com.anarayan.test.party");
+        final String memberId = extras.getString("test.com.anarayan.test.memberid");
+        final String endOfDate = extras.getString("test.com.anarayan.test.endofdate");
+        final String t;
         int val = 0;
         String newLoc;
-        final String v;
+//        if (extras.getString("random") != null) {
+//            Log.d("T", "RANDOM IS 4");
+//            newLoc = extras.getString("random");
+//            s.append("/" + "4" + newLoc);
+//        }
         if (extras.getString("random") != null) {
-            Log.d("T", "RANDOM IS 4");
-            newLoc = extras.getString("random");
-            v= "/" + "4" + newLoc;
+            //s.append(extras.getString("type"));
+            s.append(extras.getString("latitude") + "/");
+            s.append(extras.getString("longitude"));
+            t = "/random";
         }
         else {
-            final String name = extras.getString("test.com.anarayan.test.name");
-            Log.d("T", "NAME IS: " + name);
-            if (name != null && name.equals("Senator Loni Hancock")) {
-                val = 1;
-            }
-            else if (name != null && name.equals("Senator Mary Mcilroy")) {
-                val = 2;
-            }
-            else {
-                val = 3;
-            }
-            v = "/"+val;
+
+            s.append(name + "/" + party + "/" + memberId + "/" + endOfDate);
+//            final String name = extras.getString("test.com.anarayan.test.name");
+//            Log.d("T", "NAME IS: " + name);
+//            if (name != null && name.equals("Senator Loni Hancock")) {
+//                val = 1;
+//            }
+//            else if (name != null && name.equals("Senator Mary Mcilroy")) {
+//                val = 2;
+//            }
+//            else {
+//                val = 3;
+//            }
+//            v = "/"+val;
+            t = "/name";
 
         }
-
-
-        final String party = extras.getString("test.com.anarayan.test.party");
+        final String v = s.toString();
+        Log.d("T", "HELLO LOSER WHAT IS END OF DATE: " + s.toString());
         // Send the message with the cat name
         new Thread(new Runnable() {
             @Override
@@ -93,7 +107,7 @@ public class WatchToPhoneService extends Service implements GoogleApiClient.Conn
                 //first, connect to the apiclient
                 mWatchApiClient.connect();
                 //now that you're connected, send a massage with the cat name
-                sendMessage(v, "name");
+                sendMessage(t, v);
             }
         }).start();
 

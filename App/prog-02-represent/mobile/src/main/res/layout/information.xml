@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/realinput"
+    android:background="@drawable/backy"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:weightSum="1"
+    android:orientation="vertical"
     android:touchscreenBlocksFocus="false">
 
 
@@ -22,7 +23,6 @@
         android:layout_width="fill_parent"
         android:layout_height="23dp"
         android:id="@+id/loc"
-        android:text="Berkeley, CA 94704"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
         android:layout_alignParentStart="true"
@@ -36,303 +36,562 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="500dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="10dp"
         android:id="@+id/scrollView">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="300dp"
+            android:orientation="vertical">
 
-            <FrameLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="-90dp"
+                android:orientation="vertical"
                 android:id="@+id/frame1">
                 <ImageView
-                    android:layout_width="300dp"
-                    android:layout_height="240dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="380dp"
                     android:id="@+id/imageView2"
-                    android:layout_marginTop="100dp"
-                    android:background="@drawable/blurb8"
+                    android:background="@drawable/blurb9"
                     android:layout_below="@+id/imageView"
-                    android:layout_toEndOf="@+id/textView"
-                    android:layout_gravity="center_horizontal"
-                    android:focusableInTouchMode="false" />
+                    android:layout_toEndOf="@+id/textView" />
 
                 <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="110dp"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
                     android:id="@+id/imageView"
-                    android:background="@drawable/lonihancock"
                     android:layout_below="@+id/editText2"
                     android:layout_toEndOf="@+id/textView"
-                    android:layout_marginTop="110dp"
-                    android:layout_marginLeft="40dp"/>
+                    android:layout_marginTop="-350dp"
+                    android:layout_gravity="center"/>
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="84dp"
+                    android:layout_height="wrap_content"
                     android:id="@+id/senatorName"
-                    android:text="Senator Loni Hancock"
+                    android:layout_gravity="center"
                     android:textColor="#ffffff"
-                    android:textSize="15dp"
-                    android:layout_marginTop="120dp"
-                    android:layout_marginLeft="140dp"
+                    android:textSize="20dp"
+                    android:layout_marginTop="20dp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="50dp"
+                    android:layout_height="wrap_content"
                     android:id="@+id/senatorParty"
-                    android:text="Democratic Party"
                     android:textColor="#ffffff"
-                    android:textSize="15dp"
-                    android:layout_marginTop="140dp"
-                    android:layout_marginLeft="140dp"
+                    android:textSize="17dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center"
                     android:textStyle="normal" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:id="@+id/senatorEmail"
-                    android:text="Email address: lonihancock@gmail.com"
                     android:textColor="#ffffff"
                     android:textSize="13dp"
-                    android:layout_marginTop="170dp"
-                    android:layout_marginLeft="140dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
                     android:textStyle="normal" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:id="@+id/senatorWebsite"
-                    android:text="Visit: http://sd09.senate.ca.gov/"
                     android:textColor="#ffffff"
                     android:textSize="13dp"
-                    android:layout_marginTop="230dp"
-                    android:layout_marginLeft="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="-20dp"
                     android:textStyle="normal" />
 
-                <TextView
-                    android:layout_width="250dp"
-                    android:layout_height="50dp"
-                    android:id="@+id/senatorTweet"
-                    android:text="Latest tweet: 'Proud to join Phil Ting in authoring bill to fix the high school exit exam fiasco. All students matter!'"
-                    android:textColor="#ffffff"
-                    android:textSize="13dp"
-                    android:layout_marginTop="260dp"
-                    android:layout_marginLeft="75dp"
-                    android:textStyle="normal" />
+                <!--<TextView-->
+                    <!--android:layout_width="250dp"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:id="@+id/senatorTweet"-->
+                    <!--android:text="Latest tweet: 'Proud to join Phil Ting in authoring bill to fix the high school exit exam fiasco. All students matter!'"-->
+                    <!--android:textColor="#ffffff"-->
+                    <!--android:textSize="13dp"-->
+                    <!--android:layout_marginTop="260dp"-->
+                    <!--android:layout_marginLeft="60dp"-->
+                    <!--android:textStyle="normal" />-->
+                <!--<com.twitter.sdk.android.tweetui.TweetView-->
+                    <!--android:id="@+id/bike_tweet"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--twittersdk:tw__tweet_id="510908133917487104"/>-->
+                    <!--twittersdk:tw__tweet_id="510908133917487104"/>-->
 
 
                 <TextView
                     android:layout_width="127dp"
                     android:layout_height="50dp"
-                    android:layout_below="@+id/senatorTweet"
-                    android:layout_marginTop="300dp"
+                    android:layout_below="@+id/senatorWebsite"
+                    android:layout_marginTop="-20dp"
                     android:layout_marginLeft="230dp"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:id="@+id/button"
                     android:layout_gravity="right|top" />
 
-            </FrameLayout>
+            </LinearLayout>
 
 
-            <FrameLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="-90dp"
-                android:layout_below="@+id/frame1"
+                android:orientation="vertical"
                 android:id="@+id/frame2">
                 <ImageView
-                    android:layout_width="300dp"
-                    android:layout_height="240dp"
-                    android:id="@+id/secondblurb"
-                    android:layout_marginTop="100dp"
-                    android:background="@drawable/blurb8"
+                    android:layout_width="match_parent"
+                    android:layout_height="380dp"
+                    android:id="@+id/imageView3"
+                    android:background="@drawable/blurb9"
                     android:layout_below="@+id/imageView"
-                    android:layout_toEndOf="@+id/textView"
-                    android:layout_gravity="center_horizontal" />
+                    android:layout_toEndOf="@+id/textView" />
 
                 <ImageView
-                    android:layout_width="85dp"
-                    android:layout_height="110dp"
-                    android:id="@+id/secondsenator"
-                    android:background="@drawable/marymcilory"
-                    android:layout_below="@+id/editText2"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:id="@+id/senator2"
                     android:layout_toEndOf="@+id/textView"
-                    android:layout_marginTop="110dp"
-                    android:layout_marginLeft="40dp"/>
+                    android:layout_marginTop="-350dp"
+                    android:layout_gravity="center"/>
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="84dp"
+                    android:layout_height="wrap_content"
                     android:id="@+id/senatorName2"
-                    android:text="Senator Mary Mcilroy"
+                    android:layout_gravity="center"
                     android:textColor="#ffffff"
-                    android:textSize="15dp"
-                    android:layout_marginTop="120dp"
-                    android:layout_marginLeft="140dp"
+                    android:textSize="20dp"
+                    android:layout_marginTop="20dp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="50dp"
+                    android:layout_height="wrap_content"
                     android:id="@+id/senatorParty2"
-                    android:text="Peace and Freedom"
                     android:textColor="#ffffff"
-                    android:textSize="15dp"
-                    android:layout_marginTop="140dp"
-                    android:layout_marginLeft="140dp"
+                    android:textSize="17dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center"
                     android:textStyle="normal" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:id="@+id/senatorEmail2"
-                    android:text="Email address: marymcilroy@gmail.com"
                     android:textColor="#ffffff"
                     android:textSize="13dp"
-                    android:layout_marginTop="170dp"
-                    android:layout_marginLeft="140dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
                     android:textStyle="normal" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:id="@+id/senatorWebsite2"
-                    android:text="Visit: https://www.facebook.com/mary.mcilroy"
                     android:textColor="#ffffff"
                     android:textSize="13dp"
-                    android:layout_marginTop="230dp"
-                    android:layout_marginLeft="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="-20dp"
                     android:textStyle="normal" />
 
-                <TextView
-                    android:layout_width="250dp"
-                    android:layout_height="50dp"
-                    android:id="@+id/senatorTweet2"
-                    android:text="Latest tweet: 'What a time it is for change.'"
-                    android:textColor="#ffffff"
-                    android:textSize="13dp"
-                    android:layout_marginTop="260dp"
-                    android:layout_marginLeft="75dp"
-                    android:textStyle="normal" />
 
                 <TextView
                     android:layout_width="127dp"
                     android:layout_height="50dp"
-                    android:layout_below="@+id/senatorTweet2"
-                    android:layout_marginTop="300dp"
+                    android:layout_below="@+id/senatorWebsite2"
+                    android:layout_marginTop="-20dp"
                     android:layout_marginLeft="230dp"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:id="@+id/button2"
                     android:layout_gravity="right|top" />
 
+            </LinearLayout>
 
 
-            </FrameLayout>
 
-
-            <FrameLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="-90dp"
-                android:layout_below="@+id/frame2"
+                android:orientation="vertical"
                 android:id="@+id/frame3">
                 <ImageView
-                    android:layout_width="300dp"
-                    android:layout_height="240dp"
-                    android:id="@+id/thirdblurb"
-                    android:layout_marginTop="100dp"
-                    android:background="@drawable/blurb8"
+                    android:layout_width="match_parent"
+                    android:layout_height="380dp"
+                    android:id="@+id/imageView4"
+                    android:background="@drawable/blurb9"
                     android:layout_below="@+id/imageView"
-                    android:layout_toEndOf="@+id/textView"
-                    android:layout_gravity="center_horizontal" />
+                    android:layout_toEndOf="@+id/textView" />
 
                 <ImageView
-                    android:layout_width="93dp"
-                    android:layout_height="110dp"
-                    android:id="@+id/rep"
-                    android:background="@drawable/jerrymcnerney"
-                    android:layout_below="@+id/editText2"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:id="@+id/rep1"
                     android:layout_toEndOf="@+id/textView"
-                    android:layout_marginTop="110dp"
-                    android:layout_marginLeft="40dp"/>
+                    android:layout_marginTop="-350dp"
+                    android:layout_gravity="center"/>
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="84dp"
-                    android:id="@+id/repName"
-                    android:text="Rep. Jerry McNerney"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/repName1"
+                    android:layout_gravity="center"
                     android:textColor="#ffffff"
-                    android:textSize="15dp"
-                    android:layout_marginTop="120dp"
-                    android:layout_marginLeft="140dp"
+                    android:textSize="20dp"
+                    android:layout_marginTop="20dp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="50dp"
-                    android:id="@+id/repParty"
-                    android:text="Democratic Party"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/repParty1"
                     android:textColor="#ffffff"
-                    android:textSize="15dp"
-                    android:layout_marginTop="140dp"
-                    android:layout_marginLeft="140dp"
+                    android:textSize="17dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center"
                     android:textStyle="normal" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:id="@+id/repEmail"
-                    android:text="Email address: jmcnerney@gmail.com"
+                    android:id="@+id/repEmail1"
                     android:textColor="#ffffff"
                     android:textSize="13dp"
-                    android:layout_marginTop="170dp"
-                    android:layout_marginLeft="140dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
                     android:textStyle="normal" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:id="@+id/repWebsite"
-                    android:text="Visit: https://mcnerney.house.gov/"
-                    android:textColor="#ffffff"
-                    android:textSize="15dp"
-                    android:layout_marginTop="230dp"
-                    android:layout_marginLeft="40dp"
-                    android:textStyle="normal" />
-
-                <TextView
-                    android:layout_width="250dp"
-                    android:layout_height="50dp"
-                    android:id="@+id/repTweet"
-                    android:text="Latest tweet: &apos;Honored to earn 100% on @LCVoters 2015 National Environmental Scorecard for efforts to #ActonClimate http://bit.ly/1S4PnIo  #LCVScorecard&apos;"
+                    android:id="@+id/repWebsite1"
                     android:textColor="#ffffff"
                     android:textSize="13dp"
-                    android:layout_marginTop="260dp"
-                    android:layout_marginLeft="75dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="-20dp"
                     android:textStyle="normal" />
+
 
                 <TextView
                     android:layout_width="127dp"
                     android:layout_height="50dp"
-                    android:layout_below="@+id/repTweet"
-                    android:layout_marginTop="300dp"
+                    android:layout_below="@+id/rep1"
+                    android:layout_marginTop="-20dp"
                     android:layout_marginLeft="230dp"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:id="@+id/button3"
                     android:layout_gravity="right|top" />
 
+            </LinearLayout>
 
-            </FrameLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:visibility="invisible"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/frame4">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="380dp"
+                    android:id="@+id/imageView5"
+                    android:background="@drawable/blurb9"
+                    android:layout_below="@+id/imageView"
+                    android:layout_toEndOf="@+id/textView" />
 
-        </RelativeLayout>
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:id="@+id/rep2"
+                    android:layout_toEndOf="@+id/textView"
+                    android:layout_marginTop="-350dp"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/repName2"
+                    android:layout_gravity="center"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:layout_marginTop="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/repParty2"
+                    android:textColor="#ffffff"
+                    android:textSize="17dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:id="@+id/repEmail2"
+                    android:textColor="#ffffff"
+                    android:textSize="13dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:id="@+id/repWebsite2"
+                    android:textColor="#ffffff"
+                    android:textSize="13dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="-20dp"
+                    android:textStyle="normal" />
+
+
+                <TextView
+                    android:layout_width="127dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/rep1"
+                    android:layout_marginTop="-20dp"
+                    android:layout_marginLeft="230dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/button4"
+                    android:layout_gravity="right|top" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/frame5"
+                android:visibility="invisible">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="380dp"
+                    android:id="@+id/imageView6"
+                    android:background="@drawable/blurb9"
+                    android:layout_below="@+id/imageView"
+                    android:layout_toEndOf="@+id/textView" />
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:id="@+id/rep3"
+                    android:layout_toEndOf="@+id/textView"
+                    android:layout_marginTop="-350dp"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/repName3"
+                    android:layout_gravity="center"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:layout_marginTop="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/repParty3"
+                    android:textColor="#ffffff"
+                    android:textSize="17dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:id="@+id/repEmail3"
+                    android:textColor="#ffffff"
+                    android:textSize="13dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:id="@+id/repWebsite3"
+                    android:textColor="#ffffff"
+                    android:textSize="13dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="-20dp"
+                    android:textStyle="normal" />
+
+
+                <TextView
+                    android:layout_width="127dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/rep1"
+                    android:layout_marginTop="-20dp"
+                    android:layout_marginLeft="230dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/button5"
+                    android:layout_gravity="right|top" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/frame6"
+                android:visibility="invisible">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="380dp"
+                    android:id="@+id/imageView7"
+                    android:background="@drawable/blurb9"
+                    android:layout_below="@+id/imageView"
+                    android:layout_toEndOf="@+id/textView" />
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:id="@+id/rep4"
+                    android:layout_toEndOf="@+id/textView"
+                    android:layout_marginTop="-350dp"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/repName4"
+                    android:layout_gravity="center"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:layout_marginTop="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/repParty4"
+                    android:textColor="#ffffff"
+                    android:textSize="17dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:id="@+id/repEmail4"
+                    android:textColor="#ffffff"
+                    android:textSize="13dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:id="@+id/repWebsite4"
+                    android:textColor="#ffffff"
+                    android:textSize="13dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="-20dp"
+                    android:textStyle="normal" />
+
+
+                <TextView
+                    android:layout_width="127dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/rep4"
+                    android:layout_marginTop="-20dp"
+                    android:layout_marginLeft="230dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/button6"
+                    android:layout_gravity="right|top" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/frame7"
+                android:visibility="invisible">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="380dp"
+                    android:id="@+id/imageView8"
+                    android:background="@drawable/blurb9"
+                    android:layout_below="@+id/imageView"
+                    android:layout_toEndOf="@+id/textView" />
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:id="@+id/rep5"
+                    android:layout_toEndOf="@+id/textView"
+                    android:layout_marginTop="-350dp"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/repName5"
+                    android:layout_gravity="center"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:layout_marginTop="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/repParty5"
+                    android:textColor="#ffffff"
+                    android:textSize="17dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:id="@+id/repEmail5"
+                    android:textColor="#ffffff"
+                    android:textSize="13dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:id="@+id/repWebsite5"
+                    android:textColor="#ffffff"
+                    android:textSize="13dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="-20dp"
+                    android:textStyle="normal" />
+
+
+                <TextView
+                    android:layout_width="127dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/rep5"
+                    android:layout_marginTop="-20dp"
+                    android:layout_marginLeft="230dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/button7"
+                    android:layout_gravity="right|top" />
+
+            </LinearLayout>
+
+        </LinearLayout>
 
     </ScrollView>
 
-</RelativeLayout>
+</LinearLayout>
 
 
 

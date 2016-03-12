@@ -47,27 +47,38 @@ public class PhoneToWatchService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
         // Which cat do we want to feed? Grab this info from INTENT
         // which was passed over when we called startService
+        Log.d("T", "I AM IN HERE IN ONSTARTCOMMAND");
         Bundle extras = intent.getExtras();
         int val = 0;
         String newLoc;
-        final String v;
+        String[] names = extras.getStringArray("test.com.anarayan.test.name");
+        String[] parties = extras.getStringArray("test.com.anarayan.test.party");
+        String[] memberids = extras.getStringArray("test.com.anarayan.test.memberid");
+        String[] endOfDate = extras.getStringArray("test.com.anarayan.test.endofdate");
+        String pres = extras.getString("test.com.anarayan.test.presview");
+        final StringBuilder s = new StringBuilder();
+        final String t;
         if (extras.getString("random") != null) {
-            newLoc = extras.getString("random");
-            v = "/"+"4"+newLoc;
+            t = "/type";
         }
         else {
-            final String name = extras.getString("test.com.anarayan.test.name");
-            Log.d("T", "NAME IS: " + name);
-            if (name != null && name.equals("Senator Loni Hancock")) {
-                val = 1;
-            } else if (name != null && name.equals("Senator Mary Mcilroy")) {
-                val = 2;
-            } else {
-                val = 3;
-            }
-            v = "/"+val;
+            Log.d("T", "NAME IS: " + names[0]);
+//            if (name != null && name.equals("Senator Loni Hancock")) {
+//                val = 1;
+//            } else if (name != null && name.equals("Senator Mary Mcilroy")) {
+//                val = 2;
+//            } else {
+//                val = 3;
+//            }
+//            v = "/"+val;
+
+
+            t = "/name";
         }
-        final String party = extras.getString("test.com.anarayan.test.party");
+        for (int i = 0; i < names.length; i++) {
+            s.append(names[i] + "/" + parties[i] + "/" + memberids[i] + "/" + endOfDate[i] + "/");
+        }
+        s.append(pres);
         // Send the message with the cat name
         new Thread(new Runnable() {
             @Override
@@ -75,7 +86,7 @@ public class PhoneToWatchService extends Service {
                 //first, connect to the apiclient
                 mApiClient.connect();
                 //now that you're connected, send a massage with the cat name
-                sendMessage(v, "name");
+                sendMessage(t, s.toString());
             }
         }).start();
 

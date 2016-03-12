@@ -21,11 +21,17 @@ import android.view.LayoutInflater;
 
 public class CustomFragment extends CardFragment implements View.OnClickListener{
 
+    public String name;
+    public String party;
+    public String memberid;
+    public String endOfDate;
         @Override
     public View onCreateContentView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             Log.d("T", "IN ONCREATE: ");
-        String name = getArguments().getString("test.com.anarayan.test.name");
-        String party = getArguments().getString("test.com.anarayan.test.party");
+        name = getArguments().getString("test.com.anarayan.test.name");
+        party = getArguments().getString("test.com.anarayan.test.party");
+        memberid = getArguments().getString("test.com.anarayan.test.memberid");
+        endOfDate = getArguments().getString("test.com.anarayan.test.endofdate");
         View myView = inflater.inflate(R.layout.activity_main, container, false);
         //Fragment n = getFragmentManager().findFragmentById(R.id.name);
 
@@ -47,9 +53,12 @@ public class CustomFragment extends CardFragment implements View.OnClickListener
     public void sendMessage(View v) {
         Intent intent = new Intent(getActivity(), WatchToPhoneService.class);
         Log.d("T", "SEND MESSAGE" + getActivity().toString());
-        Log.d("T", "SEND MESSAGE " + ((MainActivity)getActivity()).getName());
-        intent.putExtra("test.com.anarayan.test.name", ((MainActivity) getActivity()).getName());
-        intent.putExtra("test.com.anarayan.test.party", ((MainActivity) getActivity()).getParty());
+        Log.d("T", "SEND MESSAGE " + name);
+        intent.putExtra("test.com.anarayan.test.name", name);
+        intent.putExtra("test.com.anarayan.test.party", party);
+        intent.putExtra("test.com.anarayan.test.memberid", memberid);
+        intent.putExtra("test.com.anarayan.test.endofdate", endOfDate);
+        Log.d("T", "WHAT IN THE WORLD IS DATE: " + endOfDate);
         getActivity().startService(intent);
     }
 

@@ -24,14 +24,20 @@ public class ShakeFragment extends CardFragment{
     @Override
     public View onCreateContentView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         Log.d("T", "IN ONCREATE: ");
-        String county = getArguments().getString("county");
+        String[] pres = getArguments().getStringArray("test.com.anarayan.test.pres");
         View myView = inflater.inflate(R.layout.shake, container, false);
         //Fragment n = getFragmentManager().findFragmentById(R.id.name);
 
         //Fragment p = getFragmentManager().findFragmentById(R.id.party);
         //TextView button = (TextView) myView.findViewById(R.id.textView);
         TextView p = (TextView) myView.findViewById(R.id.county);
-        p.setText(county);
+        TextView q = (TextView) myView.findViewById(R.id.state);
+        TextView obama = (TextView) myView.findViewById(R.id.obama);
+        TextView romney = (TextView) myView.findViewById(R.id.romney);
+        p.setText(pres[0]);
+        q.setText(pres[1]);
+        romney.setText(pres[2]);
+        obama.setText(pres[3]);
         return myView;
     }
 

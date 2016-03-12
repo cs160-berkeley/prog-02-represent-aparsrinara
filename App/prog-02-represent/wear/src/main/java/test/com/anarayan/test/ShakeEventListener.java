@@ -114,6 +114,10 @@ public class ShakeEventListener implements SensorEventListener {
         }
     }
 
+
+//
+
+
     /**
      * Resets the shake parameters to their default values.
      */

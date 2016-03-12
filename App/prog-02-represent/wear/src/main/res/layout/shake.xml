@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="60% votes for Obama"
-        android:id="@+id/textView4"
+        android:id="@+id/obama"
         android:layout_marginLeft="20dp"
         android:textSize="10dp"
         android:textColor="#000000" />
@@ -23,7 +23,7 @@
         android:layout_marginLeft="20dp"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="40% votes for Romney"
-        android:id="@+id/textView3"
+        android:id="@+id/romney"
         android:layout_gravity="right"
         android:textSize="10dp"
         android:textColor="#000000" />
